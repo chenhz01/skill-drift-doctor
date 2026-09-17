@@ -22,5 +22,9 @@ jobs:
       - name: Run test suite
         run: python -m unittest discover -s tests -v
       - name: Smoke test CLI
+        shell: bash
         run: |
-          python skill_drift_doctor.py report tests/fixtures
+          # healthy skill must pass
+          python skill_drift_doctor.py check tests/fixtures/healthy
+          # drifted fixture intentionally fails refs; assert exit-code semantics
+          python skill_drift_doctor.py refs tests/fixtures/drifted && exit 1 || test $? -eq 1
