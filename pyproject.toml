@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-drift-doctor"
+version = "0.1.0"
+description = "Post-installation health checks for agent skills: integrity baselines, append-only injected-block verification, referential drift, structural rot. Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "agent-memory-doctor Open Source Team" }]
+keywords = ["agent", "skills", "SKILL.md", "claude", "integrity", "drift", "linter"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+skill-drift-doctor = "skill_drift_doctor:main"
+sdd = "skill_drift_doctor:main"
+
+[tool.setuptools]
+py-modules = ["skill_drift_doctor"]
