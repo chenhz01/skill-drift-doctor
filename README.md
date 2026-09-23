@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> **此仓已并入 [`skill-clinic`](https://github.com/chenhz01/skill-clinic)**（四工具合一，统一入口）
+> 本仓转为只读归档，issue 与 star 请移步旗舰仓。
+
+---
+
 # skill-drift-doctor
 
 **Post-installation health checks for agent skills.** Zero dependencies. One file. CLI + GitHub Action.
